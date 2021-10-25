@@ -1,5 +1,6 @@
 import React from "react";
 import { Movie } from "../Movie";
+import "./MovieList.module.css";
 
 export class MovieList extends React.Component {
   state = {
@@ -29,22 +30,19 @@ export class MovieList extends React.Component {
             <span className="loader__text">Loading...</span>
           </div>
         ) : (
-          movies.map((movie) => {
-            console.log(movie);
-            return (
-              <div className="movie">
-                <Movie
-                  key={movie.id}
-                  id={movie.id}
-                  year={movie.year}
-                  title={movie.title}
-                  summary={movie.summary}
-                  poster={movie.medium_cover_image}
-                  genres={movie.genres}
-                />
-              </div>
-            );
-          })
+          <div className="movie">
+            {movies.map((movie) => (
+              <Movie
+                key={movie.id}
+                id={movie.id}
+                year={movie.year}
+                title={movie.title}
+                summary={movie.summary}
+                poster={movie.medium_cover_image}
+                genres={movie.genres}
+              />
+            ))}
+          </div>
         )}
       </div>
     );
