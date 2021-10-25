@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 
 
 
+
 export function Movie({ id, year, title, summary, poster, genres, }) {
     return (<div className="movie__description">
         <img src={poster} alt={title} title={title} />
