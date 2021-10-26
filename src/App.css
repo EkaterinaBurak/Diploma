@@ -3,7 +3,9 @@
 }
 
 body {
-  background-color: #eff3f7;
+  /*background-color: #eff3f7; 
+  background-color: rgb(245, 223, 77);*/
+  background-color: rgb(147, 149, 151);
   margin: 0;
   padding: 0;
   height: 100%;
@@ -51,7 +53,9 @@ body,
   height: 300px;
   margin-bottom: 70px;
   font-weight: 300;
-  background-color: white;
+  /*background-color: white;*/
+  background-color: rgb(245, 223, 77);
+  /* background-color: rgb(147, 149, 151);*/
   padding: 20px;
   border-radius: 5px;
   color: #adaeb9;
@@ -77,7 +81,7 @@ body,
 
 .movie__title,
 .movie__year {
-  font-weight: 300;
+  font-weight: 500;
   margin: 0;
 }
 
@@ -99,8 +103,10 @@ body,
 .movie__year {
   font-size: 14px;
   margin-right: 10px;
+  color: azure;
 }
 
 .movie__summary {
   color: black;
+  font-weight: 400;
 }
