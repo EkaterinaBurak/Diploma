@@ -1,6 +1,6 @@
 import React from "react";
-import { Movie } from "../Movie";
-// import styles from "./MovieList.module.css";
+import { Movie } from "./Movie/Movie";
+// import "./MovieList.css";
 
 export class MovieList extends React.Component {
   state = {

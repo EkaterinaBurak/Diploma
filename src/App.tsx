@@ -1,11 +1,11 @@
 import React from "react";
-import { MovieList } from "./components/MovieList";
+import { RootRouter } from "./routing/RootRouter";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <MovieList />
+      <RootRouter />
     </div>
   );
 }
