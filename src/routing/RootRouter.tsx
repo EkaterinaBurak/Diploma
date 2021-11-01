@@ -15,8 +15,8 @@ export function RootRouter() {
           <Route path="/about" component={About} />
           <Route path="/movie/:id" component={MovieCard} />
         </Switch>
-        <Footer />
       </div>
+      <Footer />
     </BrowserRouter>
   );
 }

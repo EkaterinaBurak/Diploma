@@ -1,12 +1,9 @@
-/* .movie__description {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+.movie__description {
     width: 45%;
-    height: 300px;
+    height: 380px;
+    background-color: white;
     margin-bottom: 70px;
     font-weight: 300;
-    background-color: white;
     padding: 20px;
     border-radius: 5px;
     color: #adaeb9;
@@ -66,4 +63,4 @@
 
 .movie__summary {
     color: black;
-} */
+}

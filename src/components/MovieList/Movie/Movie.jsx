@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
-// import "./Movie.css";
+import "./Movie.css";
 
 export function Movie({ id, year, title, summary, poster, genres }) {
   return (
-    <div className="movie">
+    <div className="movie__description">
       <NavLink
         to={{
           pathname: `/movie/${id}`,
@@ -18,7 +18,7 @@ export function Movie({ id, year, title, summary, poster, genres }) {
           },
         }}
       >
-        <img src={poster} alt={title} title={title} />
+        <img className="movie__poster" src={poster} alt={title} title={title} />
         <div className="movie__column">
           <h3 className="movie__title">{title}</h3>
           <h5 className="movie__year">{year}</h5>
@@ -31,7 +31,7 @@ export function Movie({ id, year, title, summary, poster, genres }) {
               );
             })}
           </ul>
-          <p className="movie__summary">{summary.slice(0, 140)}...</p>
+          <p className="movie__summary">{summary.slice(0, 100)}...</p>
         </div>
       </NavLink>
     </div>
