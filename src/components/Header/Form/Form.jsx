@@ -11,6 +11,13 @@ export function Form({ onClick }) {
 
   const getText = () => {
     onClick(text);
+    setText(" ");
+  };
+  const onEnterPress = (event) => {
+    if (event.key === "Enter") {
+      onClick(text);
+      setText("");
+    }
   };
   return (
     <div className="page_head">
@@ -21,6 +28,7 @@ export function Form({ onClick }) {
             type="text"
             value={text}
             placeholder="Search..."
+            onKeyDown={onEnterPress}
             onChange={onChangeInput}
           ></input>
           <button className="button" onClick={getText}>

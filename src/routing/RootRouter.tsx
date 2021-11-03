@@ -17,7 +17,7 @@ export function RootRouter() {
         <Form onClick={(text: string) => setSearchText(text)} />
         <NavBar />
         <Switch>
-          <Route path="/" exact={true}>
+          <Route path="/" exact={true} component={MovieList}>
             <MovieList searchText={searchText} />
           </Route>
           <Route path="/about" component={About} />
