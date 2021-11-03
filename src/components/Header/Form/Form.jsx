@@ -1,5 +1,5 @@
-import React from "react";
 import { useState } from "react";
+
 import "./Form.css";
 
 export function Form({ onClick }) {
@@ -11,7 +11,6 @@ export function Form({ onClick }) {
 
   const getText = () => {
     onClick(text);
-    setText("");
   };
   return (
     <div className="page_head">

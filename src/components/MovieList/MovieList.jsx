@@ -23,6 +23,11 @@ export class MovieList extends React.Component {
 
   render() {
     const { isLoading, movies } = this.state;
+    const { searchText } = this.props;
+    const filteredMovies = movies?.filter((movie) =>
+      movie.title?.toLowerCase().includes(searchText.toLowerCase())
+    );
+
     return (
       <div className="container">
         {isLoading ? (
@@ -31,7 +36,7 @@ export class MovieList extends React.Component {
           </div>
         ) : (
           <div className="movie">
-            {movies.map((movie) => (
+            {filteredMovies.map((movie) => (
               <Movie
                 key={movie.id}
                 id={movie.id}

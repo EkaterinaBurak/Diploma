@@ -21,7 +21,9 @@ export class MovieCard extends React.Component {
               <h3 className="movieCard__title">{location.state.title}</h3>
               <h5 className="movieCard__year">{location.state.year}</h5>
               <ul className="movieCard__genres">
-                <li className="genres__genre">{location.state.genres}</li>
+                {location.state.genres.map((item) => (
+                  <li className="genres__genre">{item}</li>
+                ))}
               </ul>
               <p className="movieCard__summary">{location.state.summary}</p>
             </div>
